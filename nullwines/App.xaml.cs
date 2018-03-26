@@ -1,14 +1,19 @@
 ﻿using Xamarin.Forms;
+using nullwines.Pages;
+using nullwines.Data;
 
 namespace nullwines
 {
     public partial class App : Application
     {
+        public static WineManager WineManager { get; private set; }
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new nullwinesPage();
+            WineManager = new WineManager(new RestService());
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
