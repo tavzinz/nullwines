@@ -46,12 +46,13 @@
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\WineList.cs" />
+    <Compile Include="ViewModels\WinesViewModel.cs" />
     <Compile Include="Models\Wine.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Interfaces\IRestService.cs" />
     <Compile Include="Data\WineManager.cs" />
     <Compile Include="Data\RestService.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

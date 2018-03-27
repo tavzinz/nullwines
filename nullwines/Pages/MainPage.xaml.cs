@@ -8,13 +8,22 @@ namespace nullwines.Pages
 {
     public partial class MainPage : ContentPage
     {
+        WinesViewModel vm;
 
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = new WineList();
-
+            vm = new WinesViewModel();
+            BindingContext = vm;
         }
+
+		protected override void OnAppearing()
+		{
+            base.OnAppearing();
+            vm.LoadItems();
+                
+
+		}
 
 
 	}
